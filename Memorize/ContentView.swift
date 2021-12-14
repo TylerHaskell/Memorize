@@ -9,19 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: EmojiMemoryGame
-
-//    @State var emojis = ["🚲", "🚂", "🚁", "🚜", "🚕", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀", "⛵️", "🛸", "🛶", "🚌", "🏍", "🛺", "🚠", "🛵", "🚗", "🚚", "🚇", "🛻", "🚝"]
-    var vehicleEmojis = ["🚲", "🚂", "🚁", "🚜", "🚕", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀", "⛵️", "🛸", "🛶", "🚌", "🏍", "🛺", "🚠", "🛵", "🚗", "🚚", "🚇", "🛻", "🚝"]
-    var sportEmojis = ["⚽️", "🏀", "🏈", "⚾️", "🎾", "🥏", "🎱", "🏒", "⛳️", "🎣", "🥌", "🏂", "🏊🏼‍♂️", "🏹", "🥊", "⛷", "⛸"]
-    var animalEmojis = ["🦆", "🦅", "🦉", "🐣", "🐺", "🐍", "🐢", "🐙", "🦑", "🦈", "🐊", "🐅", "🐘", "🐓", "🦌", "🐕", "🦃", "🐈‍⬛", "🦚", "🦩", "🐿"]
     
     var body: some View {
         VStack {
             HStack {
-                Text("Memorize!")
-                    .font(.title)
+                Text("\(viewModel.themeName)")
+                    .font(.largeTitle)
                     .foregroundColor(Color.black)
+                Spacer()
+                Text("Score: \(viewModel.score)")
+                    .font(.largeTitle)
             }
+            .padding()
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))] ) {
                     ForEach(viewModel.cards) { card in
@@ -33,58 +32,16 @@ struct ContentView: View {
                     }
                 }
             }
-            .foregroundColor(.red)
+            .foregroundColor(viewModel.themeColor)
             Spacer()
-            HStack {
-                Spacer()
-                vehicles
-                Spacer()
-                sports
-                Spacer()
-                animals
-                Spacer()
+            Button(action: {
+                viewModel.newGame()
+            }) {
+                Text("New Game")
+                    .font(.largeTitle)
             }
         }
         .padding(.horizontal)
-    }
-    
-    var vehicles: some View {
-        Button(action: {
-            emojis = vehicleEmojis.shuffled()
-            emojiCount = Int.random(in: 4..<vehicleEmojis.count)
-        }) {
-            VStack {
-                Image(systemName: "car")
-                    .font(.largeTitle)
-                Text("Vehicles")
-            }
-        }
-    }
-    
-    var sports: some View {
-        Button(action: {
-            emojis = sportEmojis.shuffled()
-            emojiCount = Int.random(in: 4..<sportEmojis.count)
-        }) {
-            VStack {
-                Image(systemName: "sportscourt")
-                    .font(.largeTitle)
-                Text("Sports")
-            }
-        }
-    }
-    
-    var animals: some View {
-        Button(action: {
-            emojis = animalEmojis.shuffled()
-            emojiCount = Int.random(in: 4..<animalEmojis.count)
-        }) {
-            VStack {
-                Image(systemName: "pawprint")
-                    .font(.largeTitle)
-                Text("Animals")
-            }
-        }
     }
     
 }
