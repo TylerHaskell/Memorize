@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		736588D327AAFE3C001A951A /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736588D227AAFE3C001A951A /* Cardify.swift */; };
 		738E51472788B5C400BC5F5F /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738E51462788B5C400BC5F5F /* AspectVGrid.swift */; };
 		738E5149278C9F9300BC5F5F /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738E5148278C9F9300BC5F5F /* Pie.swift */; };
 		7396B9C12759395400BF00E6 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7396B9C02759395300BF00E6 /* MemoryGame.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		736588D227AAFE3C001A951A /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		738E51462788B5C400BC5F5F /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		738E5148278C9F9300BC5F5F /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		7396B9C02759395300BF00E6 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				73A7024627433D690033873C /* MemorizeApp.swift */,
 				73A7024A27433D6B0033873C /* Assets.xcassets */,
 				73A7024C27433D6B0033873C /* Preview Content */,
+				736588D227AAFE3C001A951A /* Cardify.swift */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				7396B9C12759395400BF00E6 /* MemoryGame.swift in Sources */,
 				73A7024927433D6A0033873C /* EmojiMemoryGameView.swift in Sources */,
+				736588D327AAFE3C001A951A /* Cardify.swift in Sources */,
 				738E51472788B5C400BC5F5F /* AspectVGrid.swift in Sources */,
 				73A7024727433D690033873C /* MemorizeApp.swift in Sources */,
 				738E5149278C9F9300BC5F5F /* Pie.swift in Sources */,
